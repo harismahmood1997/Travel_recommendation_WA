@@ -1,0 +1,467 @@
+/* Universal Resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar Main Wrapper */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0B2530;
+  padding: 12px 40px;
+}
+
+/* Logo & Title */
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+}
+
+.brand-title {
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.nav-links a:hover {
+  opacity: 0.8;
+}
+
+/* Search Bar Wrapper */
+.search-input-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: #FFFFFF;
+  padding: 4px 6px 4px 20px;
+  border-radius: 30px;
+  gap: 10px;
+}
+
+.search-input-wrapper input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #555;
+  width: 240px;
+}
+
+.search-icon {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Buttons */
+.btn-search,
+.btn-clear {
+  background-color: #178074;
+  color: #FFFFFF;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.btn-search:hover,
+.btn-clear:hover {
+  background-color: #12635a;
+}
+
+/* Hero Section Container */
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+              url('images/banner.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  padding: 40px 60px 40px 100px;
+  box-sizing: border-box;
+}
+
+/* Social Media Sidebar */
+.social-icons {
+  position: absolute;
+  left: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  z-index: 10;
+}
+
+.social-icons a {
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.social-icons a:hover {
+  opacity: 1;
+}
+
+/* Introduction Content Box */
+.hero-content {
+  max-width: 600px;
+  color: #ffffff;
+  z-index: 2;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.hero-intro {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.btn-book {
+  background-color: #178074;
+  color: #ffffff;
+  border: none;
+  padding: 12px 28px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-book:hover {
+  background-color: #12635a;
+}
+
+/* Results Section Grid Layout */
+#results {
+  width: 100%;
+  z-index: 20;
+}
+
+.results-heading {
+  color: #ff9f43;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 320px);
+  gap: 25px;
+  align-items: start;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 15px;
+  color: #333;
+}
+
+.card-body h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #000;
+}
+
+.card-body p {
+  font-size: 13px;
+  line-height: 1.4;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.btn-visit {
+  background-color: #178074;
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.btn-visit:hover {
+  background-color: #12635a;
+}
+
+/* ==========================================================================
+   ABOUT US PAGE STYLES
+   ========================================================================== */
+.about-hero-section {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+              url('images/banner.jpg') no-repeat center center/cover;
+  padding: 40px 60px 40px 100px;
+  box-sizing: border-box;
+}
+
+.about-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+.about-title {
+  font-size: 52px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+/* Glassmorphism Information Container */
+.company-info-box {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 20px 25px;
+  border-radius: 4px;
+  margin-bottom: 40px;
+}
+
+.company-info-box p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.company-info-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* Team Section Grid & Layout */
+.team-section {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.team-heading {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1.1;
+  min-width: 120px;
+}
+
+.team-grid {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+}
+
+.team-card {
+  flex: 1;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px 15px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.avatar-icon {
+  font-size: 48px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.team-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.team-card p {
+  font-size: 12px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 15px;
+  min-height: 35px;
+}
+
+/* Role Badge */
+.role-badge {
+  display: inline-block;
+  background-color: #178074;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 6px 16px;
+  border-radius: 4px;
+}
+
+/* ==========================================================================
+   CONTACT US PAGE STYLES
+   ========================================================================== */
+.contact-hero-section {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+              url('images/banner.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  padding: 0 60px 0 100px;
+  box-sizing: border-box;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+/* Left Contact Section */
+.contact-left {
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  flex: 1;
+  padding-top: 20px;
+}
+
+.contact-title {
+  font-size: 52px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.contact-subtitle {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Contact Form Wrapper */
+.contact-form-wrapper {
+  flex: 1;
+  max-width: 500px;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  color: #ffffff;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #178074;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* Form Submit Button */
+.btn-submit {
+  width: 100%;
+  background-color: #178074;
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 10px;
+}
+
+.btn-submit:hover {
+  background-color: #12635a;
+}
