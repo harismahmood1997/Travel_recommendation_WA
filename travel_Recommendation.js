@@ -28,8 +28,15 @@ function searchRecommendations() {
 
       if (query === 'beach' || query === 'beaches') {
         results = data.beaches || [];
+
       } else if (query === 'temple' || query === 'temples') {
         results = data.temples || [];
+
+      } else if (query === 'country' || query === 'countries') {
+        if (data.countries) {
+          results = data.countries.flatMap(country => country.cities || []);
+        }
+
       } else {
         const matchedCountry = data.countries ? data.countries.find(
           country => country.name.toLowerCase() === query || country.name.toLowerCase().includes(query)
@@ -51,13 +58,11 @@ function displayResults(items) {
     return;
   }
 
-  // Hide default hero text to fit results grid
   if (heroContent) heroContent.style.display = 'none';
 
-  let html = `<h2 class="results-heading">Search Results</h2>`;
-  html += `<div class="card-grid">`;
+  let html = `<div class="card-grid">`;
 
-  items.slice(0, 2).forEach(item => {
+  items.forEach(item => {
     html += `
       <div class="card">
         <img src="${item.imageUrl}" alt="${item.name}">
@@ -77,6 +82,6 @@ function displayResults(items) {
 function clearResults() {
   conditionInput.value = '';
   resultsContainer.innerHTML = '';
-  // Restore default hero text on clear
+  // Restore hero text on clear
   if (heroContent) heroContent.style.display = 'block';
 }
